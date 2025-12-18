@@ -47,42 +47,7 @@ export default function Home() {
                             <LuFingerprint />
                         </div>
                     </span>
-                    <div className="hidden group-hover:block border border-slate-400 w-full">
-                        <form
-                            onSubmit={handleSubmit}
-                            className="flex flex-col items-center justify-center w-full"
-                        >
-                            {/* Button to open file picker */}
-                            <button
-                                type="button"
-                                onClick={() => fileInputRef.current.click()}
-                                className="p-5 border border-dashed hover:cursor-pointer w-1/2"
-                            >
-                                {image ? image.name : "Select Image"}
-                            </button>
-
-                            {/* Hidden file input */}
-                            <input
-                                type="file"
-                                accept="image/*"
-                                ref={fileInputRef}
-                                hidden
-                                onChange={(e) => setImage(e.target.files[0])}
-                            />
-
-                            <br />
-                            <br />
-
-                            {/* Submit */}
-                            <button
-                                className="p-5 border hover:cursor-pointer rounded-2xl hover:bg-slate-400 hover:border-none"
-                                type="submit"
-                                disabled={loading}
-                            >
-                                {loading ? "Uploading..." : "Send to API"}
-                            </button>
-                        </form>
-                    </div>
+                    <div className="hidden group-hover:block border border-slate-400 "></div>
                 </div>
                 {/* right */}
                 <div className="relative group hover:font-semibold font-mono text-xl hover:text-3xl   font-extralight h-screen flex-1 bg-black hover:flex-2 transition-all duration-[0.5s] flex items-center justify-center">
